@@ -33,6 +33,13 @@ workouts = [
     {"name": "HIIT", "description": "High-intensity interval training for advanced fitness levels."},
 ]
 
+# Drop existing collections before inserting test data
+db.users.drop()
+db.teams.drop()
+db.activity.drop()
+db.leaderboard.drop()
+db.workouts.drop()
+
 # Insert test data into collections
 db.users.insert_many(users)
 db.teams.insert_many(teams)
